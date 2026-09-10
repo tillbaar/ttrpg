@@ -243,7 +243,7 @@ Now, citizen, we entreat you to review our modest survey of the Empire's dominio
 
 <footer class="footer-bar">
   <nav class="footer-grid" aria-label="Footer">
-    <a href="{{ '/md/pocketguide/' }}" class="nav-left"
+    <a href="{{ '/md/pocketguide/' | url }}" class="nav-left"
       style="visibility: hidden;">
       <svg
         class="footer-icon"
@@ -257,10 +257,10 @@ Now, citizen, we entreat you to review our modest survey of the Empire's dominio
     </a>
     <span class="nav-spacer" aria-hidden="true" style="visibility: hidden;">
       &boxv;</span>
-    <a href="{{ '/md/pocketguide/' }}" class="nav-middle">Pocket Guide</a>
+    <a href="{{ '/md/pocketguide/' | url }}" class="nav-middle">Pocket Guide</a>
     <span class="nav-spacer" aria-hidden="true">&boxv;</span>
     <!-- <span></span> -->
-    <a href="{{ '/md/pocketguide-cyrodiil/' }}" class="nav-right">Cyrodiil
+    <a href="{{ '/md/pocketguide-cyrodiil/' | url }}" class="nav-right">Cyrodiil
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"

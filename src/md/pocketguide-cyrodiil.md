@@ -145,7 +145,7 @@ This cult, started by Tiber Septim himself, was established in the honor of Cuhl
 
 <footer class="footer-bar">
   <nav class="footer-grid" aria-label="Footer">
-    <a href="{{ '/md/pocketguide/' }}" class="nav-left">
+    <a href="{{ '/md/pocketguide/' | url }}" class="nav-left">
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"
@@ -158,10 +158,11 @@ This cult, started by Tiber Septim himself, was established in the honor of Cuhl
     </a>
     <span class="nav-spacer" aria-hidden="true">
       &boxv;</span>
-    <a href="{{ '/md/pocketguide/' }}" class="nav-middle">Pocket Guide</a>
+    <a href="{{ '/md/pocketguide/' | url }}" class="nav-middle">Pocket Guide</a>
     <span class="nav-spacer" aria-hidden="true">&boxv;</span>
     <!-- <span></span> -->
-    <a href="{{ '/md/pocketguide-skyrim/' }}" class="nav-right">Skyrim
+    <a href="{{ '/md/pocketguide-skyrim/' | url }}" class="nav-right"
+      style="visibility: hidden;">Skyrim
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"
