@@ -109,7 +109,7 @@ code, pre, kbd {
 
 @font-face {
   font-family: 'Hayghin Daedric Dozenal';
-  src: url('/fonts/HayghinDaedricDozenal.ttf') format('truetype');
+  src: url('../fonts/HayghinDaedricDozenal.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
