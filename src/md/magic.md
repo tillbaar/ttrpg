@@ -5,7 +5,7 @@ title: Magic
 
 # Magic
 
-Magic &ndash; euphemistically referred to as the Higher Art by some of its practitioners &ndash; is the craft of focusing and channeling the residue of creation found in all things, a property intrinsic to every form of matter and energy, which flows from Aetherius into the world. Magic can be harnessed in a variety of ways, but despite thousands of years of study, there is an enormous amount of speculation about how magic is generated, how it might be used, and how it flows between things. Indeed, it has been said that the mysteries of magic are as endless as the deep, dark, and endless waters of Aetherius from where it originates, and that those who study it must simply accept that there are some facets of magic that will elude them in perpetuity. Others have suggested that these mysteries remain unsolved precisely because of such defeatist perspectives.
+Magic &mdash; euphemistically referred to as the Higher Art by some of its practitioners &mdash; is the craft of focusing and channeling the residue of creation found in all things, a property intrinsic to every form of matter and energy, which flows from Aetherius into the world. Magic can be harnessed in a variety of ways, but despite thousands of years of study, there is an enormous amount of speculation about how magic is generated, how it might be used, and how it flows between things. Indeed, it has been said that the mysteries of magic are as endless as the deep, dark, and endless waters of Aetherius from where it originates, and that those who study it must simply accept that there are some facets of magic that will elude them in perpetuity. Others have suggested that these mysteries remain unsolved precisely because of such defeatist perspectives.
 
 The act of drawing on one's own reserves of mana in order to generate an effect in the world is called spellcasting. No two sorcerers weave their spells in exactly the same way; like painting or sculpting, each artist has their own distinctive style. Despite this, each culture tends to develop its own spellcasting habits. Spellcasters have been described as willworkers. A spellcaster changes reality using their own will, while specific techniques are used to ground their mind and thinking. Examples of this are spoken incantations and hand gestures; both methods help ease the mental and physical burden of a spell being cast.
 
@@ -15,7 +15,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
 
 <div class="image-text-list" style="--image-width: 5em;">
   <div class="image-wrap">
-    <img src="{{ '/images/alteration.webp' | url }}" alt="Alteration">
+    <img src="{{ '/images/colleges/alteration.webp' | url }}" alt="Alteration">
   </div>
   <div class="text-wrap">
     <p>
@@ -24,7 +24,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
   </div>
 
   <div class="image-wrap">
-    <img src="{{ '/images/conjuration.webp' | url }}" alt="Conjuration">
+    <img src="{{ '/images/colleges/conjuration.webp' | url }}" alt="Conjuration">
   </div>
   <div class="text-wrap">
     <p>
@@ -33,7 +33,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
   </div>
 
   <div class="image-wrap">
-    <img src="{{ '/images/evocation.webp' | url }}" alt="Evocation">
+    <img src="{{ '/images/colleges/evocation.webp' | url }}" alt="Evocation">
   </div>
   <div class="text-wrap">
     <p>
@@ -42,7 +42,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
   </div>
 
   <div class="image-wrap">
-    <img src="{{ '/images/illusion.webp' | url }}" alt="Illusion">
+    <img src="{{ '/images/colleges/illusion.webp' | url }}" alt="Illusion">
   </div>
   <div class="text-wrap">
     <p>
@@ -51,7 +51,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
   </div>
 
   <div class="image-wrap">
-    <img src="{{ '/images/mysticism.webp' | url }}" alt="Mysticism">
+    <img src="{{ '/images/colleges/mysticism.webp' | url }}" alt="Mysticism">
   </div>
   <div class="text-wrap">
     <p>
@@ -60,7 +60,7 @@ These days, the praxis of spellcasting is commonly broken down into six distinct
   </div>
 
   <div class="image-wrap">
-    <img src="{{ '/images/restoration.webp' | url }}" alt="Restoration">
+    <img src="{{ '/images/colleges/restoration.webp' | url }}" alt="Restoration">
   </div>
   <div class="text-wrap">
     <p>
@@ -131,5 +131,11 @@ heard as far as a standard talking voice could be heard. The Silence spell does 
 
 Sorcerers use tools called {% bemph "Foci" %} to control magical forces and prevent otherworldly energies from getting out of control. These tools may be magical crystals, metal rods, or incense, among other things. A simple failure during any spellcasting without using a Focus results in Backlash. Also, Shorting is unavailable to sorcerers without their Focus.
 
-During {% bemph "Extended Casting" %}, activating a spell takes one full minute, but the spell's base
-Duration lasts 10 times longer. A sorcerer may cast a spell with fewer Power Points than it requires (whether they have them or not) by increasing the difficulty of their Spellcraft roll. This is called {% bemph "Shorting" %}. For every Power Point a sorcerer will short, they suffer a &minus;1 penalty to the roll. If they fail a shorted skill roll, it's consid­ered a Critical Failure!
+#### Fast and Slow Spellcasting
+During Extended Casting, activating a spell takes one full minute, but the spell's base Duration lasts 10 times longer. Alternatively, a sorcerer may cast a spell with fewer Power Points than it requires (whether they have them or not) by increasing the difficulty of their Spellcraft roll. This is called {% bemph "Shorting" %}. For every Power Point a sorcerer will short, they suffer a &minus;1 penalty to the roll. If they fail a shorted skill roll, it is consid­ered a Critical Failure!
+
+#### Magic in Close Combat
+When engaged in close combat, to hit an adjacent enemy with a spell, you must also meet or exceed the opponent’s Parry. So, with an activation roll of 4 or higher, but lower than the target’s Parry, the spells does activate but misses the target. If it requires an opposed roll, it must meet or exceed the defender's roll or their Parry, whichever is higher. When the caster is engaged in melee and wants to cast a spells on targets they are not engaged with, they become Vulnerable. Casting a power on themself does not cause this.
+
+#### Offensive Magic
+Every spell affecting targets in a negative way is considered an attack. Offensive spells suffer penalties from Illumination, as they require line of sight. Whether Cover affects a spells depends on its Trappings. Offensive spells can be used as free attacks, as long as they only affect a single target. Such spells can also benefit from Aim.

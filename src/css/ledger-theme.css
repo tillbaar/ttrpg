@@ -1,7 +1,34 @@
 /* --------------------------------------------------------------------------
    load after latex.css
-   latex.css hardcodes its fonts directly on selectors, i.e., it has no font
-   variables, so these are selector overrides, not custom-property swaps
+   latex.css hardcodes its fonts directly on selectors, so these font choices
+   are selector overrides, not custom-property swaps. Everything else is
+   exposes as CSS variables on :root - those are overridden below simply
+   by re-declaring the same names.
+   -------------------------------------------------------------------------- */
+
+/* ---- Colors / Theme Variables -------------------------------------------- */
+
+:root {
+  --body-bg-color: #f2ece4; /* page background - see latex.css body rule */
+  --body-color: #181d1d;    /* main text color - see latex.css body rule */
+  --heading-color: #58180d; /* headings, rules, borders */
+  --link-visited: #58180d;  /* applied to both a and a:visited */
+  --link-focus-outline: transparent; /* latex.css draws a:focus but this */
+                                     /* makes that outline invisible.    */
+
+  /* Left at latex.css's own defaults for now. Uncomment to activate.
+  --kbd-bg-color: #e6dab8;                  background of keyboard key blocks
+  --kbd-border-color: #7a6a45;              border of keyboard key blocks
+  --table-border-color: #7a2e20;            red ink for the table rules
+  --sidenote-target-border-color: #8b6914;  border around sidenote when active
+  --footnotes-border-color: #5c4a32;        footnote section top border
+  */
+}
+
+/* ---- Base Typography -------------------------------------------------------
+   Old-style figures in running prose (period-correct book typography), and
+   lining + tabular figures wherever numbers must line up in columns. Fonts
+   or browsers without support simply ignore them.
    -------------------------------------------------------------------------- */
 
 body {
@@ -9,13 +36,20 @@ body {
   font-weight: 300;
   line-height: 1.25;
   text-align: justify;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  padding-bottom: 6rem; /* extra scrolling space below final line */
 }
-
+ 
+table,
+.tabular-nums {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+ 
 .header-anchor {
   color: inherit;
   text-decoration: none;
 }
-
+ 
 h1 {
   font-family: 'Crimson Pro', serif;
   font-weight: 700;
@@ -27,7 +61,7 @@ h1 {
   padding: 0.00rem 0.00rem 0.25rem 0.00rem; /* top right bottom left */
   margin-bottom: 0.00rem;
 }
-
+ 
 h2 {
   font-family: 'Crimson Pro', serif;
   font-weight: 700;
@@ -37,7 +71,7 @@ h2 {
   margin-top: 1.00rem;
   margin-bottom: -0.75rem;
 }
-
+ 
 h3 {
   font-family: 'Crimson Pro', serif;
   font-weight: 700;
@@ -47,88 +81,125 @@ h3 {
   padding: 0.00rem 0.00rem 0.25rem 0.00rem; /* top right bottom left */
   margin-top: 1.00rem;
   margin-bottom: -0.75rem;
-  
 }
-
-/* h4, h5, h6 {
-  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-  font-weight: 700;
-  color: var(--heading-color);
-  /* letter-spacing: 0.02em;
-} */
-
+ 
+h4 {
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.0rem;
+  color: #1155cc;
+  margin-top: 1.00rem;
+  margin-bottom: -1rem;
+}
+ 
+h5 {
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.0rem;
+  margin-top: 1.00rem;
+  margin-bottom: -1rem;
+}
+ 
 code, pre, kbd {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 300;
 }
 
-/* Old-style figures in running prose (period-correct book typography);
-   lining + tabular figures wherever numbers must line up in columns —
-   i.e. actual ledger arithmetic. Both are progressive enhancements: browsers
-   or fonts without support just ignore them. */
-body {
-  font-variant-numeric: oldstyle-nums proportional-nums;
+/* ---- Custom Fonts -------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Hayghin Daedric Dozenal';
+  src: url('/fonts/HayghinDaedricDozenal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-table,
-.tabular-nums {
-  font-variant-numeric: lining-nums tabular-nums;
+.daedric {
+  font-family: 'Hayghin Daedric Dozenal', sans-serif;
+  color: var(--heading-color);
+  font-size: 1.5em;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: middle;
+  -webkit-text-stroke: 0.5px var(--heading-color);
 }
 
-/* ---- Colors -------------------------------------------------------------- */
-:root {
-  --body-bg-color: #f2ece4;        /* page background color                 */
-  --body-color: #181d1d;           /* main text color                       */ 
-  --heading-color: #58180d;
-  --link-visited: #58180d;         /* links: unvisited visited hover active */
-  --link-focus-outline: transparent; /* outline / border when link is focused */
+/* ---- Utility / Shortcode Classes ----------------------------------------- */
 
-  /*--pre-bg-color: #b99b68; /* background color of code blocks */
-  /*--kbd-bg-color: #e6dab8; /* background color of keyboard key blocks */
-  /*--kbd-border-color: #7a6a45; /* border color of keyboard key blocks */
-  /*--table-border-color: #7a2e20; /* red ink for the rules */
-  /*--sidenote-target-border-color: #8b6914; /* table border color */
-  /*--footnotes-border-color: #5c4a32; /* footnote border color */
+.text-emphasis-blue { color: #1155cc; font-weight: 500; }
+ 
+.smallcaps-red {
+  font-variant: small-caps;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+ 
+.imglab { /* used for the text annotations of the map in the Pockert Guide */
+  font-family: 'Crimson Pro', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  fill: var(--heading-color);
 }
 
-/* ---- Margin Rule ---------------------------------------------------------
-   Adds a red rule near the left edge, separating a column from the entry.
-   border-left sits outside latex.css's existing padding (border-box sizing
-   is already set globally by latex.css), so this doesn't shift or override
-   any of its spacing. Reuses latex.css's own thick-border-width token.
+.imglab.imglab-grey { fill: #808080; }
 
-body {
-  border-left: var(--border-width-thick) solid var(--link-visited);
-}*/
+/* ---- Content Elements ---------------------------------------------------- */
 
-/* ---- Blockquote ----------------------------------------------------------
-   latex.css does not style <blockquote> — this adds this functionality
-*/
-blockquote {
+/* latex.css does not style <blockquote> — this adds that */
+/* blockquote {
   border-left: var(--border-width-thin) solid var(--link-visited);
   padding-left: 1.25rem;
   font-style: italic;
+} */
+ 
+.inspiration-quote { /* used on the main page */
+  position: relative;
+  display: block;
+  text-align: center;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: var(--heading-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+ 
+.inspiration-quote::before,
+.inspiration-quote::after {
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 2px;
+  background-color: var(--heading-color);
+}
+ 
+.inspiration-quote::before {
+  top: 0;
+  left: 2rem;
+}
+ 
+.inspiration-quote::after {
+  bottom: 0;
+  right: 2rem;
 }
 
-/* ---- KaTeX ---------------------------------------------------------------
-   Adds vertical spacing around block-level math equations rendered by KaTeX.
-*/
-.katex-display {
-  margin: 1.8rem 0;
-}
+/* ---- KaTeX --------------------------------------------------------------- */
+ 
+/* Vertical spacing around block-level math equations rendered by KaTeX */
+/* .katex-display { margin: 1.8rem 0; } */
 
-/* ---- Shortcode ----------------------------------------------------------- */
-.text-emphasis-blue {
-  color: #1155cc;
-  font-weight: 500;
-}
+/* ---- Lists --------------------------------------------------------------- */
+ 
+ul { margin-bottom: 0; }
+ul li { margin-bottom: 0.5lh; }
 
 /* ---- Tables -------------------------------------------------------------- */
-
-table.borders-custom {
-  margin: 1rem 0;
-}
-
+ 
+table.borders-custom { margin: 1rem 0; }
+ 
 table.borders-custom th,
 table.borders-custom td {
   padding: 0.25rem;
@@ -136,34 +207,32 @@ table.borders-custom td {
   vertical-align: top;
   text-align: justify;
 }
-
-table.borders-custom th {
-  font-weight: 500;
-}
-
-.col-1-nowrap tr > :nth-child(1),
-.col-2-nowrap tr > :nth-child(2),
-.col-3-nowrap tr > :nth-child(3),
-.col-4-nowrap tr > :nth-child(4),
-.col-5-nowrap tr > :nth-child(5),
-.col-6-nowrap tr > :nth-child(6),
-.col-7-nowrap tr > :nth-child(7),
-.col-8-nowrap tr > :nth-child(8),
-.col-9-nowrap tr > :nth-child(9),
+ 
+table.borders-custom th { font-weight: 500; }
+ 
+.col-1-nowrap  tr > :nth-child(1),
+.col-2-nowrap  tr > :nth-child(2),
+.col-3-nowrap  tr > :nth-child(3),
+.col-4-nowrap  tr > :nth-child(4),
+.col-5-nowrap  tr > :nth-child(5),
+.col-6-nowrap  tr > :nth-child(6),
+.col-7-nowrap  tr > :nth-child(7),
+.col-8-nowrap  tr > :nth-child(8),
+.col-9-nowrap  tr > :nth-child(9),
 .col-10-nowrap tr > :nth-child(10),
 .col-11-nowrap tr > :nth-child(11),
 .col-12-nowrap tr > :nth-child(12) {
   white-space: nowrap;
 }
 
-/* ---- Image and Text Grid -------------------------------------------------
-   This creates a two-column grid layout for displaying images on the left
-   with text on the right, repeated across multiple rows. Images are scaled
-   proportionally to a width specified by -image-width (default: 4em), and
-   text filles the remaining space - 10 characters. On narrow screens, the
-   text width restriction is removed.
+/* ---- Layout: Image [L] and Text [R] Grid ------------------------------------
+   Two-column grid for displaying images on the left with text on the right,
+   repeated across multiple rows. Images are scaled proportionally to a width
+   specified by --image-width (default: 4em); text fills the remaining space
+   minus 10 characters. On narrow screens, the text width restriction is
+   removed.
    -------------------------------------------------------------------------- */
-
+ 
 .image-text-list {
   --image-width: 4em;
   display: grid;
@@ -174,7 +243,7 @@ table.borders-custom th {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
+ 
 .image-wrap {
   display: flex;
   align-items: start;
@@ -183,152 +252,99 @@ table.borders-custom th {
 .image-wrap img {
   display: block;
   width: 100%;
+  max-width: fit-content;
   height: auto;
 }
+ 
+.text-wrap p { margin: 0; max-width: calc(100% - 10ch); }
+ 
+@media (max-width: 80ch) { .text-wrap p { max-width: 100%; } }
 
-.text-wrap p {
-  margin: 0;
-  max-width: calc(100% - 10ch);
-}
-
-@media (max-width: 600px) { /* narrow display */
-  .text-wrap p {
-    max-width: 100%;
-  }
-}
-
-/* ---- Navigation Sidebar --------------------------------------------------
-   Closed by default, this fixed panel slides in over the page on open.
-   sidebar.js toggles the sidebar-open class on <body> to show / hide it.
+/* ---- Layout: Annotate Image with Viewport -----------------------------------
+   Two-column grid for displaying images on the left with text on the right,
+   repeated across multiple rows. Images are scaled proportionally to a width
+   specified by --image-width (default: 4em); text fills the remaining space
+   minus 10 characters. On narrow screens, the text width restriction is
+   removed.
    -------------------------------------------------------------------------- */
 
-/* ---- Sidebar Button ------------------------------------------------------ */
-
-#sidebar-toggle {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 40;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--heading-color);
-  color: var(--body-bg-color);
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+/* .map-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-#sidebar-toggle svg {
-  fill: currentColor; /* icon color follows the button's own color */
-}
-
-.icon-close {
-  display: none;
-}
-
-body.sidebar-open .icon-menu {
-  display: none;
-}
-
-body.sidebar-open .icon-close {
-  display: block;
-}
-
-/* ---- Sidebar Styling ----------------------------------------------------- */
-
-#sidebar-backdrop {
-  position: fixed;
+.map-overlay {
+  position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 25;
-}
-
-body.sidebar-open #sidebar-backdrop {
-  opacity: 1;
-  pointer-events: auto;
-}
- 
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  width: 100%;
   height: 100%;
-  width: fit-content;
-  max-width: 80vw;
-  padding: 1.5rem;
-  background: var(--body-bg-color);
-  border-right: 1px solid var(--heading-color);
-  transform: translateX(-100%);
-  transition: transform 0.25s ease;
-  z-index: 30;
-  overflow-y: auto;
-  text-align: left;
+  pointer-events: none;
 }
 
-body.sidebar-open #sidebar {
-  transform: translateX(0);
+.map-viewport { position: relative; width: 100%; overflow: hidden; }
+.map-image { display: block; width: 100%; height: auto; } */
+
+.map-wrapper { position: relative; width: 100%; margin-top: 1rem; }
+
+.map-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.map-raster {
+  inset: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: var(--map-size, 100% 100%);
+  background-position: var(--map-position, center center);
+}
+
+/* ---- Page Footer --------------------------------------------------------- */
  
-/* ---- Sidebar List Stlying ------------------------------------------------ */
-
-/* reset default list formatting for the primary sidebar container */
-#sidebar > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* apply uniform vertical spacing between all adjacent list items in sidebar */
-#sidebar ul > li + li {
-  margin-top: 0;
-}
-
-/* spacing override that targets only the top-level list items */
-#sidebar > ul > li + li {
-  margin-top: 0.5rem;
-}
-
-/* base typography and color rules for all sidebar links */
-#sidebar a {
+.footer-bar {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--heading-color);
   font-family: 'Crimson Pro', serif;
-  color: var(--heading-color);
-  text-decoration: none;
-}
-
-/* Top-Level: Block layout for full-width border, heavy font weight */
-#sidebar > ul > li > a {
-  display: block;
-  font-weight: 700;
-  font-size: 1.2rem;
-  border-bottom: 1px solid var(--heading-color);
-}
-
-/* Top-Level: Increase spacing to nested list items */
-#sidebar > ul > li > ul {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  max-width: 11rem; /* control second-level text wrapping */
-}
-
-/* Second-Level: Lighter font weight, inherits inline layout */
-#sidebar > ul > li > ul > li > a {
   font-weight: 300;
   font-size: 1rem;
 }
 
-/* Nested Lists: Render standard bullet points, scoped to sidebar only */
-#sidebar ul ul {
-  list-style-type: disc;
-}
+/* -----------------------------------------------------------------------------
+   5 tracks: the two 20ch tracks are the fixed-width nav-left / nav-right
+   labels, the two min-content tracks are separators and both use .nav-spacer,
+   and the center auto track is .nav-middle.
+   -------------------------------------------------------------------------- */
 
-/* Nested Lists: Colorise bullet markers to match the heading color variable */
-#sidebar ul ul > li::marker {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 20ch min-content auto min-content 20ch;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   color: var(--heading-color);
 }
+ 
+.footer-icon {
+  display: inline-block;
+  height: 1.0em;
+  vertical-align: -0.25em;
+  fill: currentColor;
+}
+ 
+.nav-left   { text-align: right;  text-decoration: none; }
+.nav-middle { text-align: center; text-decoration: none; }
+.nav-right  { text-align: left;   text-decoration: none; }
+ 
+.nav-spacer { text-align: center; user-select: none;}

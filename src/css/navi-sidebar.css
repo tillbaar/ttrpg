@@ -1,0 +1,175 @@
+/* ---- Navigation Sidebar --------------------------------------------------
+   Closed by default, this fixed panel slides in over the page on open.
+   A hidden checkbox drives the open/closed state via CSS; JS only adds
+   state-memory and Esc-to-close on top.
+
+   Depends on --heading-color and --body-bg-color from ledger-theme.css's
+   :root block. That file must be loaded on the same page.
+
+   z-index stack, high to low:
+   toggle button (40) > sidebar panel (30) > backdrop (25) > page content
+   -------------------------------------------------------------------------- */
+
+/* ---- Sidebar Button Styling ---------------------------------------------- */
+
+/* This is the actually visible button that folds and unfolds the sidebar. */
+#sidebar-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 40;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--heading-color);
+  color: var(--body-bg-color);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* This is the hidden checkbocks that drives the open/close state. */
+.sidebar-toggle-checkbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sidebar-toggle-checkbox:focus-visible + #sidebar-toggle {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 2px;
+}
+
+#sidebar-toggle svg {
+  fill: currentColor; /* icon color follows the button's own color */
+}
+
+.icon-close {
+  display: none;
+}
+
+.sidebar-toggle-checkbox:checked ~ #sidebar-toggle .icon-menu {
+  display: none;
+}
+
+.sidebar-toggle-checkbox:checked ~ #sidebar-toggle .icon-close {
+  display: block;
+}
+
+/* ---- Sidebar Itself Styling ---------------------------------------------- */
+
+#sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 25;
+}
+
+.sidebar-toggle-checkbox:checked ~ #sidebar-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+ 
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: fit-content;
+  max-width: 80vw;
+  padding: 1.5rem;
+  background: var(--body-bg-color);
+  border-right: 1px solid var(--heading-color);
+  transform: translateX(-100%);
+  transition: transform 0.25s ease, visibility 0s linear 0.25s;
+  visibility: hidden;
+  z-index: 30;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.sidebar-toggle-checkbox:checked ~ #sidebar {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.25s ease;
+}
+
+/* ---- Sidebar List Styling -------------------------------------------------
+   Depth is tracked with explicit classes on the <ul> tags in base.njk
+   (sidebar-one / sidebar-two / sidebar-three), not by counting ancestor
+   <ul> elements. Each level's rules are self-contained.
+   -------------------------------------------------------------------------- */
+
+#sidebar li {
+  margin-bottom: 0;
+}
+
+#sidebar a {
+  font-family: 'Crimson Pro', serif;
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+/* ---- Lvel One -------------------------------------------------- */
+.sidebar-one { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------------------------------------------------------
+   For each top-level list item in .sidebar-one, if it follows
+   another top-level list item, add 0.5rem of space above it.
+   ---------------------------------------------------------------- */
+.sidebar-one > li + li {
+  margin-top: 0.5rem;
+}
+
+/* ----------------------------------------------------------------
+   Styles each top-level list item that is a link <a> element.
+   ---------------------------------------------------------------- */
+.sidebar-one > li > a {
+  display: block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--heading-color);
+}
+
+/* ---- Lvel Two -------------------------------------------------- */
+.sidebar-two {
+  list-style: disc;
+  margin: 0.25rem 0;
+  max-width: 11rem;
+  padding-left: 1.5rem;
+}
+
+.sidebar-two > li::marker {
+  color: var(--heading-color);
+}
+
+/* ----------------------------------------------------------------
+   Styles each second-level list item that is a link <a> element.
+   ---------------------------------------------------------------- */
+.sidebar-two > li > a {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* ---- Lvel Three  ----------------------------------------------- */
+.sidebar-three {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}

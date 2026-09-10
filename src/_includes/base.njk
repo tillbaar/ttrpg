@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">  {# minumim page size is set to 500px (see below) #}
+  <meta name="viewport" content="width=500, initial-scale=1">
   <title>{{ title or "Page" }}</title>
 
   {#       Body Text: Albert Sans Light Medium Bold Black #}
@@ -17,66 +17,108 @@
   <link rel="stylesheet" href="{{ '/css/vendor/latex.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/vendor/katex.min.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/ledger-theme.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/navi-sidebar.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/sidenotes.css' | url }}">
 </head>
 <body>
 
-  {# Navigation Sidebar Button #}
-  <button
-    id="sidebar-toggle"
-    type="button"
-    aria-expanded="false"
-    aria-controls="sidebar"
-    aria-label="Open Navigation">
+{# Button and Folding Navigation Sibebar ------------------------------------ #}
 
-    {# Navigation Sidebar Open Button: MDI Compass Rose #}
-    <svg
-      class="icon-menu"
-      viewBox="0 0 24 24"
-      width="32" height="32"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M15 9L12 0L9 9L0 12L9 15L12 24L15 15L24 12L15 9M4 12L10 10L11 12H4M12
-		    20L10 14L12 13V20M12 4L14 10L12 11V4M14 14L13 12H20L14 14M8.7 17.3L5
-		    19L6.7 15.3L8.3 15.8L8.7 17.3M17.3 15.3L19 19L15.3 17.3L15.8 15.7L17.3
-		    15.3M6.7 8.7L5 5L8.7 6.7L8.2 8.2L6.7 8.7M15.3 6.7L19 5L17.3 8.7L15.7
-		    8.2L15.3 6.7Z
-      "/>
+<input
+  type="checkbox"
+  id="sidebar-toggle-checkbox"
+  class="sidebar-toggle-checkbox"
+  aria-label="Toggle navigation">
+
+<label
+  id="sidebar-toggle"
+  for="sidebar-toggle-checkbox"
+  aria-hidden="true">
+  {# SVG: Navigation Sidebar Open Button: MDI Compass Rose #}
+  <svg
+    class="icon-menu"
+    viewBox="0 0 24 24"
+    width="32" height="32"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="
+      M15 9L12 0L9 9L0 12L9 15L12 24L15 15L24 12L15 9M4 12L10 10L11 12H4M12
+	    20L10 14L12 13V20M12 4L14 10L12 11V4M14 14L13 12H20L14 14M8.7 17.3L5
+	    19L6.7 15.3L8.3 15.8L8.7 17.3M17.3 15.3L19 19L15.3 17.3L15.8 15.7L17.3
+	    15.3M6.7 8.7L5 5L8.7 6.7L8.2 8.2L6.7 8.7M15.3 6.7L19 5L17.3 8.7L15.7
+	    8.2L15.3 6.7Z "/>
+  </svg>
+  {# SVG: Navigation Sidebar Close Button: MDI Page First #}
+  <svg
+    class="icon-close"
+    viewBox="0 0 24 24"
+    width="32" height="32"
+    aria-hidden="true">
+    <path d="
+      M18.41,16.59L13.82,12L18.41,7.41L17,6L11,12L17,18L18.41,16.59M6,
+      6H8V18H6V6Z "/>
     </svg>
-
-    {# Navigation Sidebar Close Button: MDI Page First #}
-    <svg
-      class="icon-close"
-      viewBox="0 0 24 24"
-      width="32" height="32"
-      aria-hidden="true">
-      <path d="
-        M18.41,16.59L13.82,12L18.41,7.41L17,6L11,12L17,18L18.41,16.59M6,
-        6H8V18H6V6Z
-      "/>
-      </svg>
-  </button>
+  </label>
 
   {# Navigation Sidebar Backdrop #}
-  <div id="sidebar-backdrop" aria-hidden="true"></div>
-  <nav id="sidebar" aria-label="Site Navigation">
-    <h2 style="margin-top: 0; margin-bottom: 1rem;">Navigation</h2>
-    <ul>
-      <li><a href="{{ '/' | url }}">Home</a></li>
-      <li>
-        <a href="{{ '/md/magic/' | url }}">Magic</a>
-        <ul>
-          <li><a href="{{ '/md/magic/#the-six-colleges' | url }}">The Six Colleges</a></li>
-          <li><a href="{{ '/md/magic/#arcane-backgrounds' | url }}">Arcane Backgrounds</a></li>
-        </ul>
-      </li>
-      <!-- add more pages here as you create them -->
-    </ul>
-  </nav>
+  <label
+    id="sidebar-backdrop"
+    for="sidebar-toggle-checkbox"
+    aria-hidden="true">
+  </label>
+<nav id="sidebar" aria-label="Site Navigation">
+  <h2 style="margin-top: 0; margin-bottom: 1rem;">Navigation</h2>
+  <ul class="sidebar-one">
+    <li><a href="{{ '/' | url }}">Home</a></li>
+    <li>
+      <a href="{{ '/md/characters/' | url }}">Characters</a>
+      <ul class="sidebar-two">
+        <li>
+          <a href="{{ '/md/characters/#species' | url }}">Species</a>
+          <ul class="sidebar-three">
+            <li><a href="{{ '/md/characters/#khajiiti-morphology' | url }}">Khajiiti Morphology</a></li>
+            <li><a href="{{ '/md/characters/#beastfolk-qualities' | url }}">Beastfolk Qualities</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/md/characters/#attributes' | url }}">Attributes</a></li>
+        <li><a href="{{ '/md/characters/#skills' | url }}">Skills</a></li>
+        <li><a href="{{ '/md/characters/#hindrances' | url }}">Hindrances</a></li>
+        <li><a href="{{ '/md/characters/#derived-statistics' | url }}">Derived Statistics</a></li>
+        <li><a href="{{ '/md/characters/#equipment' | url }}">Equipment</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="{{ '/md/magic/' | url }}">Magic</a>
+      <ul class="sidebar-two">
+        <li><a href="{{ '/md/magic/#the-six-colleges' | url }}">The Six Colleges</a></li>
+        <li>
+          <a href="{{ '/md/magic/#arcane-backgrounds' | url }}">Arcane Backgrounds</a>
+          <ul class="sidebar-three">
+            <li><a href="{{ '/md/magic/#sorcery' | url }}">Sorcery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="{{ '/md/houserules/' | url }}">House Rules</a>
+      <ul class="sidebar-two">
+        <li><a href="{{ '/md/houserules/#general-rules' | url }}">General Rules</a></li>
+        <li><a href="{{ '/md/houserules/#combat-rules' | url }}">Combat Rules</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ '/md/pocketguide/' | url }}">Pocket Guide</a>
+      <ul class="sidebar-two">
+        <li><a href="{{ '/md/pocketguide-cyrodiil/' | url }}">Cyrodiil</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
   {{ content | safe }}
 
   {# Navigation Sidebar Script #}
   <script src="{{ '/js/sidebar.js' | url }}"></script>
+  {# Sidenote Responsive Script #}
+  <script src="{{ '/js/sidenotes.js' | url }}"></script>
 </body>
 </html>

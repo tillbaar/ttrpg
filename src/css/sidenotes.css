@@ -1,0 +1,78 @@
+/* ---- Responsive Sidenotes ------------------------------------------------
+   Closed by default, this fixed panel slides in over the page on open.
+   A hidden checkbox drives the open/closed state via CSS; JS only adds
+   state-memory and Esc-to-close on top.
+
+   Responsive sidenote overrides, load after latex.css.
+   Same selectors and specificity as the rules already in latex.css, so these
+   declarations depend on load order.
+
+   Pairs with sidenotes.js, which sets
+   --sidenote-width and --sidenote-offset and toggles the sidenotes-stacked
+   class when there isn't enough room for a readable sidenote.
+   -------------------------------------------------------------------------- */
+
+.sidenote {
+  width: var(--sidenote-width, 18vw);
+  margin-right: var(--sidenote-offset, -20vw);
+}
+
+.sidenote.left {
+  margin-left: var(--sidenote-offset, -20vw);
+}
+
+/* ----------------------------------------------------------------
+   Mirrors latex.css @media (max-width: 1050px) stacked/toggle
+   layout. The JavaScript adds this class above that breakpoint
+   if the measured space is still too tight for a readable sidenote.
+   ---------------------------------------------------------------- */
+html.sidenotes-stacked label.sidenote-toggle:not(.sidenote-number) {
+  display: inline;
+}
+
+html.sidenotes-stacked .sidenote {
+  display: none;
+}
+
+html.sidenotes-stacked .sidenote-toggle:checked + .sidenote {
+  display: block;
+  margin: 0.5rem 1.25rem 1rem 0.5rem;
+  float: left;
+  left: 1rem;
+  clear: both;
+  width: 95%;
+}
+
+/* ---- Sidenote Styling ---------------------------------------------------- */
+
+.sidenote-number::after {
+  content: counter(sidenote-counter, upper-roman);
+  color: var(--heading-color);
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.sidenote-number ~ .sidenote::before {
+  content: counter(sidenote-counter, upper-roman) '. ';
+  color: var(--heading-color);
+  font-style: normal;
+  font-size: 1rem;
+  top: 0;
+}
+
+label.sidenote-toggle:not(.sidenote-number) {
+  color: var(--heading-color);
+  margin-right: -0.25ch;
+}
+
+.sidenote {
+  font-style: italic;
+  color: var(--heading-color);
+  margin-top: 0.125rem;
+}
+
+.sidenote.left {
+  font-style: italic;
+  color: var(--heading-color);
+  margin-top: 0.125rem;
+}
