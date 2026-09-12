@@ -260,6 +260,46 @@ table.borders-custom th { font-weight: 500; }
  
 @media (max-width: 80ch) { .text-wrap p { max-width: 100%; } }
 
+/* ---- Layout: Image [L] and Text [R] Float -----------------------------------
+   The image floats left and the text reflow around it. The text is full width.
+   Below the width threshold, the image is hidden, so narrow columns get the
+   full-width text.
+   -------------------------------------------------------------------------- */
+
+.image-text-flow {
+  --image-width: 4em;
+  display: flex;
+  flex-direction: column;
+  container-type: inline-size;
+  margin-block: 1rem;
+  gap: 1rem;
+}
+
+.image-text-flow .item { display: flow-root; }
+
+.image-text-flow .image-wrap {
+  display: flex;
+  float: left;
+  width: var(--image-width);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.image-text-flow .image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: fit-content;
+}
+
+.image-text-flow .text-wrap p { margin: 0 0 1rem 0; max-width: 100%; }
+.image-text-flow .text-wrap p:last-child { margin-bottom: 0; }
+
+@container (max-width: 50ch) { .image-text-flow .image-wrap {
+  display: none; }
+}
+
 /* ---- Layout: Annotate Image with Viewport -----------------------------------
    Two-column grid for displaying images on the left with text on the right,
    repeated across multiple rows. Images are scaled proportionally to a width
