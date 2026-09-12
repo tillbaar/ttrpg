@@ -33,12 +33,12 @@ title: Pocket Guide to the Empire - Cyrodiil
         class="imglab imglab-grey" font-size="36" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Hammerfell</text>
-      <text x=" 375.00" y="900.00"
+      <text x="375.00" y="900.00"
         class="imglab imglab-grey" font-size="36" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Elsweyr</text>
       <desc>CITY NAMES ----------------------------------------- </desc>
-      <text x=" 520.00" y="352.50"
+      <text x="520.00" y="352.50"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Imperial City</text>
@@ -48,28 +48,28 @@ title: Pocket Guide to the Empire - Cyrodiil
         stroke="var(--body-bg-color)" paint-order="stroke fill"
         dominant-baseline="middle">
         Anvil</text>
-      <circle cx=" 627.50" cy="665.00" r="6.25" fill="var(--heading-color)"/>
-      <text x=" 627.50" y="645.00"
+      <circle cx="627.50" cy="665.00" r="6.25" fill="var(--heading-color)"/>
+      <text x="627.50" y="645.00"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Bravil</text>
       <circle cx="507.50" cy="117.50" r="6.25" fill="var(--heading-color)"/>
-      <text x=" 507.50" y=" 97.50"
+      <text x="507.50" y="97.50"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Bruma</text>
       <circle cx="787.50" cy="265.00" r="6.25" fill="var(--heading-color)"/>
-       <text x=" 787.50" y="245.00"
+       <text x="787.50" y="245.00"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Cheydinhal</text>
       <circle cx="520.00" cy="372.50" r="6.25" fill="var(--heading-color)"/>
-      <text x=" 256.25" y="255.00"
+      <text x="256.25" y="255.00"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Chorrol</text>
       <circle cx="256.25" cy="275.00" r="6.25" fill="var(--heading-color)"/>
-      <text x=" -12.50" y="557.50"
+      <text x="-12.50" y="557.50"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Kvatch</text>
@@ -79,7 +79,7 @@ title: Pocket Guide to the Empire - Cyrodiil
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Leyawiin</text>
       <circle cx="725.00" cy="991.25" r="6.25" fill="var(--heading-color)"/>
-      <text x=" 250.00" y="521.25"
+      <text x="250.00" y="521.25"
         class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
         stroke="var(--body-bg-color)" paint-order="stroke fill">
         Skingrad</text>
@@ -161,7 +161,7 @@ This cult, started by Tiber Septim himself, was established in the honor of Cuhl
     <a href="{{ '/md/pocketguide/' | url }}" class="nav-middle">Pocket Guide</a>
     <span class="nav-spacer" aria-hidden="true">&boxv;</span>
     <!-- <span></span> -->
-    <a href="{{ '/md/pocketguide-skyrim/' | url }}" class="nav-right">Skyrim
+    <a href="{{ '/md/pocketguide-elsweyr/' | url }}" class="nav-right">Elsweyr
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"

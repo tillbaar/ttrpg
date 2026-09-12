@@ -182,19 +182,19 @@ title: Pocket Guide to the Empire
       class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
       stroke="var(--body-bg-color)" paint-order="stroke fill">
       Skyrim</text>
-    <text x=" 30.00" y="255.00"
+    <text x="30.00" y="255.00"
       class="imglab" font-size="36" stroke-width="5px"
       stroke="var(--body-bg-color)" paint-order="stroke fill">
       High Rock</text>
-    <text x=" 30.00" y="442.50"
+    <text x="30.00" y="442.50"
       class="imglab" font-size="36" stroke-width="5px"
       stroke="var(--body-bg-color)" paint-order="stroke fill">
       Hammerfell</text>
-    <text x=" 15.00" y="820.00"
+    <text x="15.00" y="820.00"
       class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
       stroke="var(--body-bg-color)" paint-order="stroke fill">
       Summerset</text>
-    <text x=" 15.00" y="850.00"
+    <text x="15.00" y="850.00"
       class="imglab" font-size="36" text-anchor="middle" stroke-width="5px"
       stroke="var(--body-bg-color)" paint-order="stroke fill">
       Isle</text>
