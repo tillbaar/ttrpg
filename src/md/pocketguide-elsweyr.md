@@ -137,7 +137,8 @@ Torval is the city-state of Elsweyr's spiritual and temporal ruler, the Mane. Th
     <a href="{{ '/md/pocketguide/' | url }}" class="nav-middle">Pocket Guide</a>
     <span class="nav-spacer" aria-hidden="true">&boxv;</span>
     <!-- <span></span> -->
-    <a href="{{ '/md/pocketguide-elsweyr/' | url }}" class="nav-right">Elsweyr
+    <a href="{{ '/md/pocketguide-morrowind/' | url }}" class="nav-right">
+      Morrowind
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"
