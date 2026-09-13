@@ -43,9 +43,9 @@
     probe.style.fontSize = cs.fontSize;
     probe.style.fontFamily = cs.fontFamily;
     probe.textContent = '0';
-    contextEl.appendChild(probe);
+    document.body.appendChild(probe);
     const width = probe.getBoundingClientRect().width;
-    contextEl.removeChild(probe);
+    document.body.removeChild(probe);
     return width;
   }
 
