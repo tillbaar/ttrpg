@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Pocket Guide to the Empire - Cyrodiil
+title: Pocket Guide to the Empire - Elsweyr Confederacy
 ---
 
 # Pocket Guide
