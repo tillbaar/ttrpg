@@ -121,7 +121,7 @@ Torval is the city-state of Elsweyr's spiritual and temporal ruler, the Mane. Th
 
 <footer class="footer-bar">
   <nav class="footer-grid" aria-label="Footer">
-    <a href="{{ '/md/pocketguide-cyrodiil/' | url }}" class="nav-left">
+    <a href="{{ '/md/pocketguide-skyrim/' | url }}" class="nav-left">
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"
@@ -130,7 +130,7 @@ Torval is the city-state of Elsweyr's spiritual and temporal ruler, the Mane. Th
         xmlns="http://www.w3.org/2000/svg">
         <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
       </svg>
-      Cyrodiil
+      Skyrim
     </a>
     <span class="nav-spacer" aria-hidden="true">
       &boxv;</span>
