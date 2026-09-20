@@ -297,6 +297,8 @@ table.col-12-nowrap tr > :nth-child(12) {
   display: block;
   height: auto;
 }
+
+.image-text-flow .text-wrap p { margin: 0 0 1rem; max-width: 100%; }
 .image-text-flow .text-wrap p:last-child { margin-bottom: 0; }
 
 @container flow-item (max-width: 60ch) {
