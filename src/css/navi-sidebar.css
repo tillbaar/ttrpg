@@ -18,17 +18,17 @@
   bottom: 1.5rem;
   left: 1.5rem;
   z-index: 40;
-  width: 52px;
-  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--heading-color);
+  width: 52px;
+  height: 52px;
   color: var(--body-bg-color);
+  cursor: pointer;
+  background: var(--heading-color);
   border: none;
   border-radius: 14px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
 }
 
 /* This is the hidden checkbocks that drives the open/close state. */
@@ -36,11 +36,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
+  clip-path: inset(50%);
 }
 
 .sidebar-toggle-checkbox:focus-visible + #sidebar-toggle {
@@ -49,7 +51,7 @@
 }
 
 #sidebar-toggle svg {
-  fill: currentColor; /* icon color follows the button's own color */
+  fill: currentcolor; /* icon color follows the button's own color */
 }
 
 .icon-close {
@@ -69,40 +71,40 @@
 #sidebar-backdrop {
   position: fixed;
   inset: 0;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
   z-index: 25;
+  pointer-events: none;
+  cursor: pointer;
+  background: rgb(0 0 0 / 25%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .sidebar-toggle-checkbox:checked ~ #sidebar-backdrop {
-  opacity: 1;
   pointer-events: auto;
+  opacity: 1;
 }
- 
+
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  z-index: 30;
+  visibility: hidden;
   width: fit-content;
   max-width: 80vw;
+  height: 100%;
   padding: 1.5rem;
+  overflow-y: auto;
+  text-align: left;
   background: var(--body-bg-color);
   border-right: 1px solid var(--heading-color);
   transform: translateX(-100%);
   transition: transform 0.25s ease, visibility 0s linear 0.25s;
-  visibility: hidden;
-  z-index: 30;
-  overflow-y: auto;
-  text-align: left;
 }
 
 .sidebar-toggle-checkbox:checked ~ #sidebar {
-  transform: translateX(0);
   visibility: visible;
+  transform: translateX(0);
   transition: transform 0.25s ease;
 }
 
@@ -117,16 +119,16 @@
 }
 
 #sidebar a {
-  font-family: 'Crimson Pro', serif;
+  font-family: "Crimson Pro", serif;
   color: var(--heading-color);
   text-decoration: none;
 }
 
-/* ---- Lvel One -------------------------------------------------- */
-.sidebar-one { 
-  list-style: none;
-  margin: 0;
+/* ---- Level One ------------------------------------------------- */
+.sidebar-one {
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /* ----------------------------------------------------------------
@@ -142,17 +144,17 @@
    ---------------------------------------------------------------- */
 .sidebar-one > li > a {
   display: block;
-  font-weight: 700;
   font-size: 1.2rem;
+  font-weight: 700;
   border-bottom: 1px solid var(--heading-color);
 }
 
-/* ---- Lvel Two -------------------------------------------------- */
+/* ---- Level Two ------------------------------------------------- */
 .sidebar-two {
-  list-style: disc;
-  margin: 0.25rem 0;
   max-width: 11rem;
   padding-left: 1.5rem;
+  margin: 0.25rem 0;
+  list-style: disc;
 }
 
 .sidebar-two > li::marker {
@@ -163,13 +165,13 @@
    Styles each second-level list item that is a link <a> element.
    ---------------------------------------------------------------- */
 .sidebar-two > li > a {
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
 }
 
-/* ---- Lvel Three  ----------------------------------------------- */
+/* ---- Level Three  ---------------------------------------------- */
 .sidebar-three {
-  list-style: none;
-  margin: 0;
   padding-left: 0;
+  margin: 0;
+  list-style: none;
 }

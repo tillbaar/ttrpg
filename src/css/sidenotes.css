@@ -35,44 +35,44 @@ html.sidenotes-stacked .sidenote {
 }
 
 html.sidenotes-stacked .sidenote-toggle:checked + .sidenote {
-  display: block;
-  margin: 0.5rem 1.25rem 1rem 0.5rem;
-  float: left;
   left: 1rem;
+  float: left;
   clear: both;
+  display: block;
   width: 95%;
+  margin: 0.5rem 1.25rem 1rem 0.5rem;
 }
 
 /* ---- Sidenote Styling ---------------------------------------------------- */
 
 .sidenote-number::after {
-  content: counter(sidenote-counter, upper-roman);
-  color: var(--heading-color);
   font-size: 0.5rem;
   font-weight: 700;
+  color: var(--heading-color);
+  content: counter(sidenote-counter, upper-roman);
 }
 
 .sidenote-number ~ .sidenote::before {
-  content: counter(sidenote-counter, upper-roman) '. ';
-  color: var(--heading-color);
-  font-style: normal;
-  font-size: 1rem;
   top: 0;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--heading-color);
+  content: counter(sidenote-counter, upper-roman) ". ";
 }
 
 label.sidenote-toggle:not(.sidenote-number) {
-  color: var(--heading-color);
   margin-right: -0.25ch;
+  color: var(--heading-color);
 }
 
 .sidenote {
+  margin-top: 0.125rem;
   font-style: italic;
   color: var(--heading-color);
-  margin-top: 0.125rem;
 }
 
 .sidenote.left {
+  margin-top: 0.125rem;
   font-style: italic;
   color: var(--heading-color);
-  margin-top: 0.125rem;
 }
