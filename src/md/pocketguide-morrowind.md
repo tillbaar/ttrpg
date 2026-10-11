@@ -170,8 +170,8 @@ The vast volcano of Tamriel, this giant mountain dominates the north of Morrowin
     <a href="{{ '/md/pocketguide/' | url }}" class="nav-middle">Pocket Guide</a>
     <span class="nav-spacer" aria-hidden="true">&boxv;</span>
     <!-- <span></span> -->
-    <a href="{{ '/md/pocketguide-morrowind/' | url }}" class="nav-right">
-      Morrowind
+    <a href="{{ '/md/pocketguide-wildregions/' | url }}" class="nav-right">
+      Untamed Regions
       <svg
         class="footer-icon"
         viewBox="0 0 24 24"
