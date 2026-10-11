@@ -120,14 +120,14 @@ title: Pocket Guide to the Empire
   margin-left: 10ch;
   line-height: 1.5;
   margin-bottom: 1rem;">
-  To {% bemph "AKATOSH" %} whose Perch from Eternity allowed the Day.<br>
-  To {% bemph "KYNARETH" %} who returns the Masculine Breath.<br>
-  To {% bemph "DIBELLA" %} who pays Men in Moans.<br>
-  To {% bemph "ARKAY" %} who braves the Diminuendo.<br>
-  To {% bemph "JULIANOS" %} who incants the Damned Equation.<br>
-  To {% bemph "MARA" %} who fills the Empty and drains the Stones.<br>
-  To {% bemph "ZENITHAR" %} the Provider of our Ease.<br>
-  To {% bemph "STENDARR" %} who suffers Men to read.<br>
+  To <span class="smallcaps-blue">Akatosh</span> whose Perch from Eternity allowed the Day.<br>
+  To <span class="smallcaps-blue">Kynareth</span> who returns the Masculine Breath.<br>
+  To <span class="smallcaps-blue">Dibella</span> who pays Men in Moans.<br>
+  To <span class="smallcaps-blue">Arkay</span> who braves the Diminuendo.<br>
+  To <span class="smallcaps-blue">Julianos</span> who incants the Damned Equation.<br>
+  To <span class="smallcaps-blue">Mara</span> who fills the Empty and drains the Stones.<br>
+  To <span class="smallcaps-blue">Zenithar</span> the Provider of our Ease.<br>
+  To <span class="smallcaps-blue">Stendarr</span> who suffers Men to read.<br>
 </p>
 
 <p style="
@@ -135,22 +135,22 @@ title: Pocket Guide to the Empire
   margin-right: 10ch;
   line-height: 1.5;
   margin-bottom: 1rem;">
-  To <span class="smallcaps-red">boethiah</span> the Fount of Inspiration.<br>
-  To <span class="smallcaps-red">hircine</span> who is Half the Conscience of Men.<br>
-  To <span class="smallcaps-red">malacath</span> who speaks all Language Sideways.<br>
-  To <span class="smallcaps-red">mehrunes dagon</span> whose Mistress is the Blazing Sun.<br>
-  To <span class="smallcaps-red">sheogorath</span> the Comforter of Men.<br>
-  To <span class="smallcaps-red">molag bal</span> whose Breath is Most Foul.<br>
-  To <span class="smallcaps-red">namira</span> whose Works endure forever.<br>
-  To <span class="smallcaps-red">mephala</span> who threads the Needle with the Hair of wives.<br>
-  To <span class="smallcaps-red">clavicus vile</span> who always answers.<br>
-  To <span class="smallcaps-red">nocturnal</span> whose Touch is Mink.<br>
-  To <span class="smallcaps-red">peryite</span> whose Foundation is Falling Rock.<br>
-  To <span class="smallcaps-red">azura</span> the Rim of all Holes.<br>
-  To <span class="smallcaps-red">meridia</span> who contains the Plenum.<br>
-  To <span class="smallcaps-red">hermaeus mora</span> who holds the Paper to the Light.<br>
-  To <span class="smallcaps-red">sanguine</span> who tastes the Shaven Fruit.<br>
-  To <span class="smallcaps-red">vaermina</span> the Weaver of the Panoply.<br>
+  To <span class="smallcaps-red">Boethiah</span> the Fount of Inspiration.<br>
+  To <span class="smallcaps-red">Hircine</span> who is Half the Conscience of Men.<br>
+  To <span class="smallcaps-red">Malacath</span> who speaks all Language Sideways.<br>
+  To <span class="smallcaps-red">Mehrunes Dagon</span> whose Mistress is the Blazing Sun.<br>
+  To <span class="smallcaps-red">Sheogorath</span> the Comforter of Men.<br>
+  To <span class="smallcaps-red">Molag Bal</span> whose Breath is Most Foul.<br>
+  To <span class="smallcaps-red">Namira</span> whose Works endure forever.<br>
+  To <span class="smallcaps-red">Mephala</span> who threads the Needle with the Hair of wives.<br>
+  To <span class="smallcaps-red">Clavicus Vile</span> who always answers.<br>
+  To <span class="smallcaps-red">Nocturnal</span> whose Touch is Mink.<br>
+  To <span class="smallcaps-red">Peryite</span> whose Foundation is Falling Rock.<br>
+  To <span class="smallcaps-red">Azura</span> the Rim of all Holes.<br>
+  To <span class="smallcaps-red">Meridia</span> who contains the Plenum.<br>
+  To <span class="smallcaps-red">Hermaeus Mora</span> who holds the Paper to the Light.<br>
+  To <span class="smallcaps-red">Sanguine</span> who tastes the Shaven Fruit.<br>
+  To <span class="smallcaps-red">Vaermina</span> the Weaver of the Panoply.<br>
 </p>
 
 <hr style="

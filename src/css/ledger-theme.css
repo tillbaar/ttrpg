@@ -133,6 +133,12 @@ code, pre, kbd {
 
 .text-emphasis-blue { font-weight: 500; color: var(--accent-color); }
 
+.smallcaps-blue {
+  font-weight: 500;
+  font-variant-caps: small-caps;
+  color: var(--accent-color);
+}
+
 .smallcaps-red {
   font-weight: 500;
   font-variant-caps: small-caps;
