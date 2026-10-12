@@ -408,7 +408,7 @@ Your character sheet contains a few other statistics you need to fill in, descri
 
 {% bemph "Pace" %} is how fast your character moves in tactical situations like combat. Standard Pace is 6, which means six tabletop inches (2.5&#8239;cm) per game round. Each inch corresponds to a distance between five feet and two yards (1.5&#8239;m) in the real world.
 
-{% bemph "Pace" %} is equal to 2 plus half your character's Melee die type (a total of 2 if a character does not have points in the Melee skill), plus any bonuses for shields or certain weapons. This is the Target Number (TN) to hit the character in close combat. For Melee skills above d12, such as d12 + 1, add half the fixed modifier, rounded down. For instance, Melee d12 + 1 grants a Parry of 8, while Melee d12 + 2 results in a Parry of 9.
+{% bemph "Parry" %} is equal to 2 plus half your character's Melee die type (a total of 2 if a character does not have points in the Melee skill), plus any bonuses for shields or certain weapons. This is the Target Number (TN) to hit the character in close combat. For Melee skills above d12, such as d12 + 1, add half the fixed modifier, rounded down. For instance, Melee d12 + 1 grants a Parry of 8, while Melee d12 + 2 results in a Parry of 9.
 
 A character's default {% bemph "Size" %} is 0 unless altered by Species Qualities, Edges, or Hindrances. Size cannot be less than &minus;1 or more than +3.
 
