@@ -44,6 +44,7 @@ export default function (eleventyConfig) {
     "node_modules/latex.css/style.css": "css/vendor/latex.css",
     "node_modules/katex/dist/katex.min.css": "css/vendor/katex.min.css",
     "node_modules/katex/dist/fonts": "css/vendor/fonts",
+    "node_modules/wavesurfer.js/dist/wavesurfer.esm.js": "js/vendor/wavesurfer.esm.js",
     "src/assets/images": "images",
     "src/assets/fonts": "fonts",
     "src/js": "js",

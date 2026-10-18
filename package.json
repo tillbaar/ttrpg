@@ -6,7 +6,8 @@
     "katex": "^0.17.0",
     "latex.css": "^1.14.0",
     "markdown-it": "^14.3.0",
-    "markdown-it-anchor": "^9.2.1"
+    "markdown-it-anchor": "^9.2.1",
+    "wavesurfer.js": "^8.0.2"
   },
   "devDependencies": {
     "@stylistic/stylelint-config": "^5.0.0",
