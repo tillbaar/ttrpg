@@ -14,6 +14,7 @@ const setup = (player) => {
     container,
     url: container.dataset.src,
     height: "auto",
+    dragToSeek: true,
     waveColor: colorred,
     cursorColor: colorred,
     progressColor: colorgrey,
@@ -23,12 +24,13 @@ const setup = (player) => {
     // making-an-audio-waveform-visualizer-with-vanilla-javascript/
     renderFunction: (channels, ctx) => {
       const { width, height } = ctx.canvas
+      const dpr = window.devicePixelRatio || 1;
       const scale = channels[0].length / width
-      const step = 10
+      const step = 8 * dpr;
 
       ctx.translate(0, height / 2)
       ctx.strokeStyle = ctx.fillStyle
-      ctx.lineWidth = 1.5
+      ctx.lineWidth = 1.5 * dpr
       ctx.beginPath()
 
       for (let i = 0; i < width; i += step * 2) {
