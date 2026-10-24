@@ -57,9 +57,27 @@ No sooner have you all made it across than you are ambushed by an enraged wyvern
 
 Soon after, your intrepid troupe reaches the edge of a circular valley, a crater, almost. The terrain slopes down several dozen metres and is covered in an impenetrable thicket of thorns all around. Only a single path seems to lead down into the hollow and back out again on the other side. Despite the oppressive heat, a layer of fog has formed about halfway down the slope, blanketing the crater's centre from sight. Its bleak surface undulates vapourously whenever a stray draught finds its way down into the hollow. Cautiously, you descend. Only when you penetrate the layer of fog can you finally see what lies ahead. The bottom of the valley is covered in tombs. Obelisks rise crookedly from the mossy ground, and several small mausolea line the edge of a small and dismal lake. Every tombstone, every sepulchre looks long since abandoned and squalid, deeply marred by the ravages of time.
 
-What's more, though, every shadow in this forsaken place seems to hide a pair of cruel eyes. Weapons at the ready, you step into the boneyard, and immediately the lurking ghouls set upon you. Then, a dreadful apparition, more shadow than flesh, rises from the ground with a ghastly shriek. A spectre, a vengeful spirit, shackled to its crumbling bones by anger and rage that transcend the boundaries between this world and the next. It rushes forward. After a perilous battle, the apparition is dispersed, and silence returns to the graveyard, as the ghouls immediately stop their advance. Cautiously, you investigate and learn that the ghouls were bewitched by the spectre's evil will. While they are certainly foul creatures, and at best unpleasant companions for men, they do not seek conflict.
+What's more, though, every shadow in this forsaken place seems to hide a pair of cruel eyes. Weapons at the ready, you step into the boneyard, and immediately the lurking ghouls set upon you. Then, a dreadful apparition, more shadow than flesh, rises from the ground with a ghastly shriek. A spectre, a vengeful spirit, shackled to its crumbling bones by anger and rage that transcend the boundaries between this world and the next. It rushes forward. After a perilous battle, the apparition is dispersed, and silence returns to the graveyard, as the ghouls immediately stop their advance. Cautiously, you investigate and learn that the ghouls were bewitched by the spectre's evil will. While they are certainly foul creatures, and a ghoul is a ghoul, and at best an unpleasant companion for man, they do not seek conflict.
 
 Leaving the ghouls behind, you finally reach the ruins of Taj'xa'thaxi in the waning evening's light. There is no sign of its inhabitants, and so you begin to climb up the many stairs of the once-resplendent edifice. However, all hope of a secretive approach is lost as you stumble into one trap after another, some ancient, some recently built. Finally, you reach a magnificent portal leading into the ancient structure. Inside, a final test awaits. Two crystalline constructs and summoned monsters attack you. After you best these guardians as well, the final pair of doors opens. However, you need to learn that Amusei was never kidnapped. He ran away to escape his arranged marriage with the help of his sweetheart, {% bemph "Hrrrk&gbreve;h" %}, captain of the gnoll marauders. After some back-and-forth, they manage to win you over, and you agree to let Amusei escape. As it turns out, the gnolls also want to join the Saint Seryn festival, and they know of a secret footpath hidden behind the nearby waterfall. Together, you set out for Almas Thirr.
+
+<div class="audioplayer">
+  <audio controls preload="none"
+    src="https://pub-621cad9297584d2c8c506030ef33f110.r2.dev/advlog01.mp3">
+  </audio>
+  <div class="ap-custom">
+    <button type="button" class="ap-play" aria-label="Play"></button>
+    <div class="waveform"
+      data-src="https://pub-621cad9297584d2c8c506030ef33f110.r2.dev/advlog01.mp3">
+    </div>
+      <span class="ap-time">
+      <span class="ap-current">0:00</span>
+      <span class="ap-sep">&sol;</span>
+      <span class="ap-total">0:00</span>
+    </span>
+    <button type="button" class="ap-download" aria-label="Download"></button>
+  </div>
+</div>
 
 ### A Murder in Almas Thirr
 
