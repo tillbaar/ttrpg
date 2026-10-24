@@ -90,3 +90,21 @@ After a few days of uneventful travel, you cross from the Howling Cloud Forest i
 Talking to {% bemph "Ra'tesh" %}, the leader of a small Khajiiti trade caravan, which is also stuck outside the gate, you learn that a notable Dunmer politician, {% bemph "Councilman Tevryn Ildhyrion" %}, was murdered last night. Some dark elves blame foreigners for the crime, which is why the city is currently closed to all non-Dunmer. However, the criminal investigation seems to be severely hampered by civil unrest. One Dunmer faction is vehemently demanding the immediate expulsion of all foreigners; the other advocates the presumption of innocence and demands that no steps be taken until the criminal investigation is concluded. Only one week remains until the festival begins, and unless the murder is solved by then, you will surely miss all the fun!
 
 You conclude that if the Ordinators won't solve the murder in time, you'll have to do it yourself! Disguised as slaves, you enter the city. At the local Guild of Mages, you make the acquaintance of {% bemph "Adri&euml;nne Fenwick" %}. As a Breton, she herself is troubled by the current anti-outlander rhetoric. Although she cannot risk her position by getting involved, which could potentially entangle the Guild in the ongoing conflict, she offers you the position of visiting lecturer. This gives you an alibi for your presence in the city. In the Limping Scrib, you meet {% bemph "Llirane Varyn" %}, a Dunmer who seems sympathetic to slaves in general… and to Bruk in particular. She gives you two pieces of advice. First, talk to the Morag Tong. The assassins' guild is not amused by unlicensed murder in the city. Second, talk to her friend {% bemph "M&aelig;ril Andas" %}, a cleric of the Tribunal who works as a healer in the Infirmary of St. Merys. This is where they brought Councilman Ildhyrion's body.
+
+<div class="audioplayer">
+  <audio controls preload="none"
+    src="https://pub-621cad9297584d2c8c506030ef33f110.r2.dev/advlog02.mp3">
+  </audio>
+  <div class="ap-custom">
+    <button type="button" class="ap-play" aria-label="Play"></button>
+    <div class="waveform"
+      data-src="https://pub-621cad9297584d2c8c506030ef33f110.r2.dev/advlog02.mp3">
+    </div>
+      <span class="ap-time">
+      <span class="ap-current">0:00</span>
+      <span class="ap-sep">&sol;</span>
+      <span class="ap-total">0:00</span>
+    </span>
+    <button type="button" class="ap-download" aria-label="Download"></button>
+  </div>
+</div>
